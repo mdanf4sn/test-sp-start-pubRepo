@@ -1,6 +1,18 @@
 pipeline {
     agent any
     stages {
+        stage('Example') {
+            steps {
+                echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
+            }
+        }
+    }
+}
+// Pipeline avec post-build
+
+/*pipeline {
+    agent any
+    stages {
         stage('Test') {
             steps {
                 //sh 'echo "Fail!"; exit 1'
@@ -27,3 +39,6 @@ pipeline {
         }
     }
 }
+*/
+
+
