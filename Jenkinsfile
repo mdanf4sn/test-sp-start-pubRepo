@@ -4,6 +4,11 @@ pipeline {
         stage('Example') {
             steps {
                 echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
+                echo "BUILD_NUMBER = ${env.BUILD_NUMBER}  BUILD_URL}=${env.BUILD_URL}"
+                echo "EXECUTOR_NUMBER = ${env.EXECUTOR_NUMBER}  NODE_NAME=${env.NODE_NAME}"
+                echo "JOB_NAME= ${env.JOB_NAME}  BUILD_TAG=${env.BUILD_TAG}"
+               // env.NOMVAR EST PAREIL A NOMVAR TOUT COURS
+                echo "WORK_SPACE= ${env.WORK_SPACE}  JAVA_HOME=${JAVA_HOME}"
             }
         }
     }
