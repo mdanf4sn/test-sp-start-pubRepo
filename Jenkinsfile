@@ -1,4 +1,13 @@
-pipeline {
+// Definir variable d'env
+node {
+    /* .. snip .. */
+    withEnv(["PATH+MAVEN=${tool 'M3'}/bin"]) {
+        sh 'mvn -B verify'
+    }
+}
+
+// Scripted pipeline
+/*pipeline {
     agent any
     stages {
         stage('Example') {
@@ -12,7 +21,7 @@ pipeline {
             }
         }
     }
-}
+}*/
 // Pipeline avec post-build
 
 /*pipeline {
