@@ -1,7 +1,7 @@
 // Definir variable d'env
 node {
     /* .. snip .. */
-    withEnv(["PATH+MAVEN=${tool 'M3'}/bin"]) {
+    withEnv(["PATH+MAVEN=${tool 'Maven360'}/bin"]) {
         sh 'mvn -B verify'
     }
 }
